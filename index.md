@@ -1,7 +1,7 @@
 ---
 layout: page
-title: gtog.github.com
-tagline: ""
+title: Welcome to from Guinness to GARCH!
+tagline: "-a compilation of finance, statistics, and other assorted projects and interests."
 ---
 {% include JB/setup %}
 
@@ -16,4 +16,6 @@ tagline: ""
 </ul>
 
 ### Contact me:
+Thanks for reading! Feel free to contact me with comments. 
+Oh yeah, after 17 years, I'm unemployed and available for hire. Check out the [About Me](http://gtog.github.com/about_me.html) page for more details about my background.
 aduncaninmotion@gmail.com
