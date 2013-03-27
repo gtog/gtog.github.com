@@ -29,71 +29,71 @@ Expertise in: Derivatives · New product development · Best execution · Progra
 
 ####Credit Suisse, New York, NY   2010-Feb 2013
  
-Director, Global Currencies and Emerging Market Client Risk Advisory Group (July 2012–Present)
+**Director, Global Currencies and Emerging Market Client Risk Advisory Group (July 2012–Present)**
 Oversee the GCEM Client Risk Advisory business in North America. The GCEM Client Risk Advisory Group operates along a number of different advisory stripes including:
 *Structural Advisory: Helping clients achieve best execution through automation and algorithmic trading.
 *Tactical Advisory: Conducting new research around topical themes like tail risk hedging, strategy selection, and event risk positioning.
-*Hedge Advisory: Helping clients optimize their hedging programs through quantitative frameworks.
-*Innovation Advisory: Designing new ways to look at information and challenging the status quo with respect to best practices.
+* Hedge Advisory: Helping clients optimize their hedging programs through quantitative frameworks.
+* Innovation Advisory: Designing new ways to look at information and challenging the status quo with respect to best practices.
 Recent personal achievements in client advisory:
-*Revamped the CS TCA (transaction cost analysis) product to improve the quantitative and visual display of the content.
-*Recoded the product in R and developed post-production templates in Adobe Illustrator.
-*Tactical Series #1 – Event Risk Positioning 2012: The Olympics and the US Presidential Elections
-*Tactical Series#2 – Volatility Regimes: Identification and the Implications for Strategy Selection.
-*Speaker – FX Invest West Coast Conference: Volatility Regimes; September 2012
-*Tactical Series #3 – Tail Risk Hedging: An in depth look at a the most popular topic in Finance
-*Hedge Right – designed custom frameworks for assessing value in FX options. Use quantitative frameworks to reduce complexity and identify value in the FX options space.
+* Revamped the CS TCA (transaction cost analysis) product to improve the quantitative and visual display of the content.
+* Recoded the product in R and developed post-production templates in Adobe Illustrator.
+* Tactical Series #1 – Event Risk Positioning 2012: The Olympics and the US Presidential Elections
+* Tactical Series#2 – Volatility Regimes: Identification and the Implications for Strategy Selection.
+* Speaker – FX Invest West Coast Conference: Volatility Regimes; September 2012
+* Tactical Series #3 – Tail Risk Hedging: An in depth look at a the most popular topic in Finance
+* Hedge Right – designed custom frameworks for assessing value in FX options. Use quantitative frameworks to reduce complexity and identify value in the FX options space.
  
-Director, GFX Sales (Aug 2010–July 2012)
+**Director, GFX Sales (Aug 2010–July 2012)
 FX sales covering quantitative accounts that traded primarily in options. Primary focus was to bring my existing relationships to Credit Suisse where no prior engagement existed. Also took over management of relationships where Credit Suisse was under-penetrated. 
-*Produced 5 million dollars in new revenue in the first year.
-*On boarded over a dozen new accounts and revitalized cold relationships within the business.
+* Produced 5 million dollars in new revenue in the first year.
+* On boarded over a dozen new accounts and revitalized cold relationships within the business.
  
 
 ####JP Morgan Chase, New York, NY 1999-2010
  
 
-Executive Director, Global Currencies and Commodities Group (2009–May 2010)
+**Executive Director, Global Currencies and Commodities Group (2009–May 2010)
 Co-developed and built the Endowment and Foundation business for currencies, interest rates, and credit derivatives.  Advised endowment and foundation clients on hedging practices, liquidity enhancement, and hedge fund replication.  Provided senior oversight for the JPMorgan Private Bank relationship.
-*Invited to present to the Amherst College Investment Committee on best practices for developing a hedge program and how to hedge various risk scenarios.
-*Built relationships with over 20 foundations that previously did not have relationships with the division.
+* Invited to present to the Amherst College Investment Committee on best practices for developing a hedge program and how to hedge various risk scenarios.
+* Built relationships with over 20 foundations that previously did not have relationships with the division.
  
-Vice President, Global Currencies and Commodities Group (2005–2009)
+**Vice President, Global Currencies and Commodities Group (2005–2009)
 Oversaw the structured investments business for currencies in New York.  Delivered the entire foreign exchange platform to the JP Morgan Private Bank, including electronic trading, OTC derivatives, and structured investments.  Served as senior product specialist and structurer for the New York based sales teams.  Responsible for new product development, testing, and deployment.
-*Built the first foreign exchange structured note platform for JP Morgan in New York.
-*Developed a mean-reversion model in FX which allows clients to gain exposure to carry efficient, long volatility positions.
-*Actively marketed and sold new hedge fund replication products that JP Morgan developed.
-*Grew the revenue from the Private Bank from $13mm to $20mm per annum.
-*Trained junior Private Bank associates in trading foreign exchange derivatives.
+* Built the first foreign exchange structured note platform for JP Morgan in New York.
+* Developed a mean-reversion model in FX which allows clients to gain exposure to carry efficient, long volatility positions.
+* Actively marketed and sold new hedge fund replication products that JP Morgan developed.
+* Grew the revenue from the Private Bank from $13mm to $20mm per annum.
+* Trained junior Private Bank associates in trading foreign exchange derivatives.
  
-Vice President, Single Name Credit Hybrids (2004–2005)
+**Vice President, Single Name Credit Hybrids (2004–2005)
 Developed and marketed a new product for single name credit hybrids.  Established infrastructure necessary to support the new trading business.
-*Started a single name credit hybrid and exotic business as an extension of the tranched credit business.
-*Collaborated with derivatives research team to create new technologies for the pricing of single name credit hybrid and exotic transactions.
-*Business generated $35mm in revenue in its first year of existence.
+* Started a single name credit hybrid and exotic business as an extension of the tranched credit business.
+* Collaborated with derivatives research team to create new technologies for the pricing of single name credit hybrid and exotic transactions.
+* Business generated $35mm in revenue in its first year of existence.
  
-Vice President, Fixed Income Derivative Marketing (2001-2004)
+**Vice President, Fixed Income Derivative Marketing (2001-2004)
 Associate, Fixed Income Derivative Marketing (1999-2001)
 Covered hedge funds, real money management firms and mortgage servicers for relative value trading across all US fixed income markets. Assisted clients with assessing their interest rate risk and applied the appropriate derivative hedges to mitigate interest rate exposure. Issued structured notes to JP Morgan’s investor clients.
  
-*Created, programmed, and maintained a volatility model for fixed income which, for the first time, allowed internal JP Morgan marketers to see a visual representation of the interest rate swap and swap options markets.
-*Rolled out model to all of the fixed income sales forces and supported new releases for the tool.  Model was eventually adopted as a corporate standard and is now officially maintained by the quantitative strategies and IT teams at JP Morgan.
-*Developed and published pioneer derivatives daily newsletter called the “Duncan Daily”, which was maintained for 2.5 years.  Publication was well subscribed and reached well over 1,000 internal and external clients on a daily basis.
-*Became an expert in relative value trading in interest rate derivatives using statistical methods and regression techniques to analyze trades for hedge funds.
+* Created, programmed, and maintained a volatility model for fixed income which, for the first time, allowed internal JP Morgan marketers to see a visual representation of the interest rate swap and swap options markets.
+* Rolled out model to all of the fixed income sales forces and supported new releases for the tool.  Model was eventually adopted as a corporate standard and is now officially maintained by the quantitative strategies and IT teams at JP Morgan.
+* Developed and published pioneer derivatives daily newsletter called the “Duncan Daily”, which was maintained for 2.5 years.  Publication was well subscribed and reached well over 1,000 internal and external clients on a daily basis.
+* Became an expert in relative value trading in interest rate derivatives using statistical methods and regression techniques to analyze trades for hedge funds.
  
-*Introduced a treasury client survey to assess client fixed income positions, still in use by JPM fixed income research today.
-*Liaised with internal research group to ensure adoption of daily research reports by clients resulting in a dramatic increase in relative value trading.
-*Promoted to Vice President in less than 18 months.
+* Introduced a treasury client survey to assess client fixed income positions, still in use by JPM fixed income research today.
+* Liaised with internal research group to ensure adoption of daily research reports by clients resulting in a dramatic increase in relative value trading.
+* Promoted to Vice President in less than 18 months.
  
 ####PNC Bank, Pittsburgh PA  1995-1997
  
 
-Asset and Liability Trader
+**Asset and Liability Trader
 Traded the derivative book used for managing interest rate exposures for PNC’s asset and liability positions.  Traded a variety of liability positions for the bank including the overnight and medium term note positions.
-*Automated the position reporting for the bank’s overnight position.
-*Actively traded fed funds and saved $5 million annually for the bank.
-*Developed derivatives position management reporting for senior management.
-*Reduced the duration mismatch in the asset and liability portfolio through the MTN program and use of derivatives.
+* Automated the position reporting for the bank’s overnight position.
+* Actively traded fed funds and saved $5 million annually for the bank.
+* Developed derivatives position management reporting for senior management.
+* Reduced the duration mismatch in the asset and liability portfolio through the MTN program and use of derivatives.
  
 
 ###EDUCATION        
