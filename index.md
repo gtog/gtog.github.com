@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Welcome!
-tagline: "'Million to one chances crop up nine times out of ten.' -Terry Pratchett"
+tagline: "-a finance and statistics blog."
 ---
 {% include JB/setup %}
 
