@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Welcome to from Guinness to GARCH!
-tagline: "-a compilation of finance, statistics, and other assorted projects and interests."
+title: Welcome!
+tagline: "'Million to one chances crop up nine times out of ten.' -Terry Pratchett"
 ---
 {% include JB/setup %}
-
 
     
 ## Recent Posts
