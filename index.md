@@ -24,5 +24,8 @@ Please check out [R-bloggers.com](http://www.r-bloggers.com) for more awesome po
 
 ### Contact me:
 Thanks for reading! Feel free to contact me with comments. 
-Oh yeah, after 17 years, I'm unemployed and available for hire. Check out the [About Me](http://gtog.github.com/about_me.html) page for more details about my background.
+I am currently seeking new work opportunities. Check out the [About Me](http://gtog.github.com/about_me.html) page for more details about my background.
 aduncaninmotion@gmail.com
+<a href="http://www.linkedin.com/in/adamcduncan">
+ 	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
+</a>
