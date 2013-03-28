@@ -4,7 +4,12 @@ title: Welcome!
 tagline: "-a finance and statistics blog."
 ---
 {% include JB/setup %}
-
+<style>
+.rss-chicklet{
+	position: relative;
+	float: right;
+}
+</style>
 <div class="rss-chicklet">
 	<p><a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml">Subscribe to FGtoG</a></p>
 </div>
