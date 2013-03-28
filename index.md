@@ -7,7 +7,7 @@ tagline: "-a finance and statistics blog."
 <style>
 .rss-chicklet{
 	position: relative;
-	float: right;
+	float: left;
 }
 </style>
 <div class="rss-chicklet">
