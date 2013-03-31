@@ -46,20 +46,21 @@
 .tag_box a {
   padding: 3px 6px;
   margin: 2px;
-  background: #eee;
-  color: #555;
+  background: #679ED2;
+  opacity: .75;
+  color: #000000;
   border-radius: 3px;
   text-decoration: none;
-  border: 1px dashed #cccccc; }
+  border: 1px solid #0C5AA6; }
 
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em; }
 
 .tag_box a:hover {
-  background-color: #e5e5e5; }
+  background-color: #408AD2; }
 
 .tag_box a.active {
-  background: #57A957;
-  border: 1px solid #4c964d;
-  color: #FFF; }
+  background: #FFB140;
+  border: 1px solid #000000;
+  color: #0C5AA6; }
