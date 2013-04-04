@@ -16,7 +16,7 @@ influence on modern science, I highly recommend David Salsburg's book [The Lady 
 
 
 ## ADAM DUNCAN
-3 Davis Court, Westfield, NJ  07090 · adam.duncan@yahoo.com · 973.818.2692
+3 Davis Court, Westfield, NJ  07090 · aduncaninmotion@gmail.com · 973.818.2692
  
 ###SUMMARY
 A senior finance professional with 17 years of experience in sales and trading.  Quantitative solutions expert with a focus on applied statistics and data visualization.  Proven history of high quality client service and building new businesses.
