@@ -5,9 +5,8 @@ tagline: ""
 ---
 {% include JB/setup %}
 
-#### R, Finance, and Other Random Bits...   
+<p class="mytagline">R, Finance, and Other Random Bits...</p>   
 
-<hr>
 
 <div class="rss-chicklet">
 	<p><a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml">Subscribe to FGtoG</a></p>
@@ -16,10 +15,9 @@ tagline: ""
 This blog is a place where I post articles I have written about topics in finance,  
 data visualization, R, hacking, workflow, and other data and information projects.  
 I have a B.S. in Information and Decision Systems from Carnegie Mellon and a Masters  
-of Science in Inustrial Administration from the [then Carnegie Mellon Graduate School  
-of Industrial Administration, now Tepper School of Business]. I have worked on fixed  
-income trading floors for my entire 17+ year career. I am a derivatives structurer by  
-trade.   
+of Science in Inustrial Administration from the (then Carnegie Mellon Graduate School  
+of Industrial Administration, now Tepper School of Business). I have worked on fixed  
+income trading floors since 1995. I am a derivatives structurer by trade.   
 
 I hope you find the posts here useful in your own work. Feel free to access any of the   
 files in my [github](https://github.com/gtog) repositories. This site is hosted on github
@@ -42,7 +40,7 @@ Please check out [R-bloggers.com](http://www.r-bloggers.com) for more awesome po
 
 ### Contact me:
 Thanks for reading! Feel free to contact me with comments. 
-I am currently seeking new work opportunities. Check out the [About Me](http://gtog.github.com/about_me.html) page for more details about my background or head over to my profile on Linked In. 
+I am currently seeking new work opportunities. Check out the "About Me" tab for more  details about my background or head over to my profile on Linked In.  
 <a href="http://www.linkedin.com/in/adamcduncan">
  	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
  </a>.
