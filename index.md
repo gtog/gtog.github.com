@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Welcome!
-tagline: "-a finance and statistics blog."
+title: Adam C. Duncan
+tagline: "R, Finance, and Other Bits"
 ---
 {% include JB/setup %}
 
@@ -9,15 +9,20 @@ tagline: "-a finance and statistics blog."
 	<p><a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml">Subscribe to FGtoG</a></p>
 </div>
 
-This blog is a place where I post articles I have written about topics in finance, 
-data visualization, R, hacking, workflow, and other data and information projects.
-I hope you find the posts useful in your own work. Feel free to access any of the 
-files in my github repositories. This site is hosted on github using Jekyll. There
-are a number of useful guides on how to create your own blog and host it on 
-Github using Jekyll. I will write up my own experiences getting this site up and 
-running in some future posts. 
+This blog is a place where I post articles I have written about topics in finance,  
+data visualization, R, hacking, workflow, and other data and information projects.  
+I have a B.S. in Information and Decision Systems from Carnegie Mellon and a Masters  
+of Science in Inustrial Administration from the [then Carnegie Mellon Graduate School  
+of Industrial Administration, now Tepper School of Business]. I have worked on fixed  
+income trading floors for my entire 17+ year career. I am a derivatives structurer by  
+trade.   
 
-Enjoy!
+I hope you find the posts here useful in your own work. Feel free to access any of the   
+files in my [github](https://github.com/gtog) repositories. This site is hosted on github  
+using Jekyll and Jekyll Bootstrap.  
+
+Enjoy!  
+
 ## Recent Posts
 
 <ul class="posts">
@@ -38,4 +43,3 @@ I am currently seeking new work opportunities. Check out the [About Me](http://g
  	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
  </a>.
 aduncaninmotion@gmail.com
-

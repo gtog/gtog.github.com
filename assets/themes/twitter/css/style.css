@@ -64,3 +64,19 @@
   background: #FFB140;
   border: 1px solid #000000;
   color: #0C5AA6; }
+
+  .sidebar{
+    position: relative;
+    float: left;
+    margin: 10px;
+    background: #BBD8F7;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    color: #5A7EA3;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+
+  .sidebar > p{
+    font-size: .8em;
+    text-align: left;
+  }
