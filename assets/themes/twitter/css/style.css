@@ -68,7 +68,7 @@
   .sidebar{
     position: relative;
     float: left;
-    clear: both;
+    clear: left;
     height: 400px;
     width:20%;
     margin: 10px;
