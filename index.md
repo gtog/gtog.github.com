@@ -22,7 +22,7 @@ income trading floors for my entire 17+ year career. I am a derivatives structur
 trade.   
 
 I hope you find the posts here useful in your own work. Feel free to access any of the   
-files in my [github](https://github.com/gtog) repositories. This site is hosted on github  
+files in my [github](https://github.com/gtog) repositories. This site is hosted on github
 using Jekyll and Jekyll Bootstrap.  
 
 Enjoy!  
