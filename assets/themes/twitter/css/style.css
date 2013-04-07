@@ -67,8 +67,8 @@
 
   .sidebar{
     position: relative;
-    float: left;
-    clear: left;
+    float: right;
+    clear: both;
     height: 400px;
     width:20%;
     margin: 10px;
