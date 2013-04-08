@@ -45,5 +45,4 @@ I am currently seeking new work opportunities. Check out the "About Me" tab for 
  	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
  </a>.
 
-<a href="http://gitub.com/gtog" alt="my github repos"><i "icon-th-list"></i> Github Repos</a>
-<a href="https://www.facebook.com/adam.duncan.73307?ref=tn_tnmn"><img src="{{ ASSET_PATH }}/bootstrap/img/glyphicons_410_facebook.png"></a>
+<a href="http://gitub.com/gtog"><i "icon-th-list"></i> Github Repos</a>
