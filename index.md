@@ -45,4 +45,4 @@ I am currently seeking new work opportunities. Check out the "About Me" tab for 
  	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
  </a>.
 
-<a href="http://gitub.com/gtog"><i "icon-th-list"></i> Github Repos</a>
+<a href="http://gitub.com/gtog" alt="Go to my github repos..."><i class="icon-th-list"></i> Github Repos</a>
