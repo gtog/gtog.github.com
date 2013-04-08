@@ -39,9 +39,11 @@ Please check out [R-bloggers.com](http://www.r-bloggers.com) for more awesome po
 
 
 ### Contact me:
-Thanks for reading! Feel free to contact me with comments. 
+Feel free to contact me with comments. 
 I am currently seeking new work opportunities. Check out the "About Me" tab for more  details about my background or head over to my profile on Linked In.  
 <a href="http://www.linkedin.com/in/adamcduncan">
  	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
  </a>.
-aduncaninmotion@gmail.com
+
+<a href="http://gitub.com/gtog" alt="my github repos"><i "icon-th-list"></i> Github Repos</a>
+<a href="https://www.facebook.com/adam.duncan.73307?ref=tn_tnmn"><img src="{{ ASSET_PATH }}/bootstrap/img/glyphicons_410_facebook.png"></a>
