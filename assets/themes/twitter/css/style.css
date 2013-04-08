@@ -84,6 +84,12 @@
     text-align: left;
   }
 
+  .sidebar > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
   .mytagline{
     font-size:25px;
     color: #BBD8F7;
