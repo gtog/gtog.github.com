@@ -67,11 +67,11 @@
   color: #0C5AA6; }
 
   .sidebar{
-    position: relative;
     float: right;
+    clear: right;
     max-height: 100%;
     max-width:12%;
-    margin-right: 250px;
+    margin-right: 100px;
     padding: 10px;
     background: inherit;
     border-radius: 5px;
@@ -93,7 +93,7 @@
 
   .mytagline{
     font-size:25px;
-    color: #BBD8F7;
+    color: #777777;
     text-align: left;
     opacity: 100%;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
