@@ -10,8 +10,8 @@ title : RSS Feed
         <title>{{ site.title }}</title>
         <description>{{ site.title }} - {{ site.author.name }}</description>
         <link>{{ site.production_url }}{{ site.rss_path }}</link>
-        <lastBuildDate>{{ site.time | date: %c }}</lastBuildDate>
-        <pubDate>{{ site.time | date: %x }}</pubDate>
+        <lastBuildDate>{{ site.time | date: "%c" }}</lastBuildDate>
+        <pubDate>{{ site.time | date: "%x" }}</pubDate>
         <ttl>1800</ttl>
 
 {% for post in site.posts %}
@@ -20,7 +20,7 @@ title : RSS Feed
                 <description>{{ post.content | xml_escape }}</description>
                 <link>{{ site.production_url }}{{ post.url }}</link>
                 <guid>{{ site.production_url }}{{ post.id }}</guid>
-                <pubDate>{{ post.date | date: %x }}</pubDate>
+                <pubDate>{{ post.date | date: "%x" }}</pubDate>
         </item>
 {% endfor %}
 
