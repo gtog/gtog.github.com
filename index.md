@@ -10,7 +10,7 @@ tagline: ""
 
 <div class="rss-chicklet">
 	<p><a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/FromGuinnessToGarch" rel="alternate" type="application/rss+xml">Subscribe to FGtoG!</a></p>
-	<i class="icon-envelope"></i><a href="http://feedburner.google.com/fb/a/mailverify?uri=FromGuinnessToGARCH&amp;loc=en_US">Subscribe via email here.</a>
+	<p><i class="icon-envelope"></i> <a href="http://feedburner.google.com/fb/a/mailverify?uri=FromGuinnessToGARCH&amp;loc=en_US">Subscribe via email here.</a></p>
 </div>
 
 This blog is a place where I post articles I have written about topics in finance,  
