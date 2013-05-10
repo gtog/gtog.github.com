@@ -3,14 +3,15 @@ layout: nil
 title : RSS Feed
 ---
 
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
         <title>{{ site.title }}</title>
         <description>{{ site.title }} - {{ site.author.name }}</description>
         <link>{{ site.production_url }}{{ site.rss_path }}</link>
-        <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
-        <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+        <lastBuildDate>{{ site.time | date: %c }}</lastBuildDate>
+        <pubDate>{{ site.time | date: %c }}</pubDate>
         <ttl>1800</ttl>
 
 {% for post in site.posts %}
