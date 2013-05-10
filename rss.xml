@@ -20,7 +20,7 @@ title : RSS Feed
                 <description>{{ post.content | xml_escape }}</description>
                 <link>{{ site.production_url }}{{ post.url }}</link>
                 <guid>{{ site.production_url }}{{ post.id }}</guid>
-                <pubDate>{{ post.date | date: %w %b %Y %H:%M:%S %Z" }}</pubDate>
+                <pubDate>{{ post.date | date: "%w %b %Y %H:%M:%S %Z" }}</pubDate>
         </item>
 {% endfor %}
 
