@@ -113,7 +113,7 @@ vb.summary <- vsum(data.fx, 0.95, 1260, method = "historical", inv.var = FALSE,
     draw = TRUE)
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotFXData1.png) ![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotFXData2.png) 
+![center](https://github.com/gtog/gtog.github.com/figs/var_part2_markdown.RMD/plotFXData1.png) ![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotFXData2.png) 
 
 {% highlight r %}
 vb.summary
