@@ -22,6 +22,8 @@ I also promised to clean up the summary function in a faster format. So, here go
 
 As usual, import some libraries:
 
+
+
 ### Setting up the data
 
 Let's go out and get the data we want to examine. This time we'll put each of the data elements in a list.  
@@ -72,6 +74,8 @@ summary function to be a little more flexible and a little more efficient. First
 we have access to the varFun function from Part 1...  
 
 
+
+
 Now we can re-write the summary function, vsum()...   
 
 {% highlight r %}
@@ -113,7 +117,7 @@ vb.summary <- vsum(data.fx, 0.95, 1260, method = "historical", inv.var = FALSE,
     draw = TRUE)
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com/figs/var_part2_markdown.RMD/plotFXData1.png) ![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotFXData2.png) 
+![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotFXData1.png) ![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotFXData2.png) 
 
 {% highlight r %}
 vb.summary
@@ -130,7 +134,7 @@ vb.summary
 ## 5 DEXKOUS   -32.176    -0.6584      -0.3133
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotFXData3.png) 
+![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotFXData3.png) 
 
 
 The AUDUSD data looks a little suspicious with a -80x VaR realization. That probably merits some investigation.  
@@ -138,6 +142,7 @@ Our new summary function gives us the ability to produce a table of VaR breaks, 
 the breaks, and plot the breaks if we want. Let's run the whole lot so we can see the table of the breaks and  
 the associated plots.  
 Warning: Running them all will take a little while. Actually, let's go ahead and do that and time the code:  
+
 
 {% highlight r %}
 ptm <- proc.time()
@@ -149,26 +154,68 @@ vb.summary <- vsum(data.master, 0.95, 1260, method = "historical", inv.var = FAL
 {% endhighlight %}
 
 
-![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotAllData1.png) 
 
-![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotAllData2.png) 
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotAllData3.png) 
+
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData1.png) 
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData2.png) 
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData3.png) 
 
 {% highlight r %}
 proc.time() - ptm
 {% endhighlight %}
 
+
+
 {% highlight text %}
 ##    user  system elapsed 
-##  433.61    0.03  436.29
+##  430.94    0.09  432.27
 {% endhighlight %}
+
+
 
 {% highlight r %}
 par(mfrow = c(1, 1))
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com/tree/master/figs/var_part2_markdown.RMD/plotAllData4.png) 
+![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData4.png) 
+
 
 ### Summing up...  
 So what do the different crises look like on average from a 95% historical VaR perspective? Meaning,  
@@ -208,6 +255,7 @@ mean(vb.summary$max.ratio, trim = 0.1)
 {% highlight text %}
 ## [1] -13.01
 {% endhighlight %}
+
 
 So, throwing out the 10% best and worst cases for the VaR breaks, we get a trimmed mean of -12.5x VaR.  
 From a visual inspection of the data, it would appear that for non-equity asset classes, somewhere between  
