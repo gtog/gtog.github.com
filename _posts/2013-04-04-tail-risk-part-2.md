@@ -117,7 +117,7 @@ vb.summary <- vsum(data.fx, 0.95, 1260, method = "historical", inv.var = FALSE,
     draw = TRUE)
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotFXData1.png) ![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotFXData2.png) 
+![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotFXData1.png) ![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotFXData2.png) 
 
 {% highlight r %}
 vb.summary
@@ -134,7 +134,7 @@ vb.summary
 ## 5 DEXKOUS   -32.176    -0.6584      -0.3133
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotFXData3.png) 
+![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotFXData3.png) 
 
 
 The AUDUSD data looks a little suspicious with a -80x VaR realization. That probably merits some investigation.  
@@ -165,19 +165,13 @@ vb.summary <- vsum(data.master, 0.95, 1260, method = "historical", inv.var = FAL
 ## Warning: missing values removed from data
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData1.png) 
+![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotAllData1.png) 
 
 {% highlight text %}
 ## Warning: missing values removed from data
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData2.png) 
-
-{% highlight text %}
-## Warning: missing values removed from data
-{% endhighlight %}
-
-
+![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotAllData2.png) 
 
 {% highlight text %}
 ## Warning: missing values removed from data
@@ -195,7 +189,13 @@ vb.summary <- vsum(data.master, 0.95, 1260, method = "historical", inv.var = FAL
 ## Warning: missing values removed from data
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData3.png) 
+
+
+{% highlight text %}
+## Warning: missing values removed from data
+{% endhighlight %}
+
+![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotAllData3.png) 
 
 {% highlight r %}
 proc.time() - ptm
@@ -205,7 +205,7 @@ proc.time() - ptm
 
 {% highlight text %}
 ##    user  system elapsed 
-##  430.94    0.09  432.27
+##  434.11    0.09  437.07
 {% endhighlight %}
 
 
@@ -214,7 +214,7 @@ proc.time() - ptm
 par(mfrow = c(1, 1))
 {% endhighlight %}
 
-![center](https://github.com/gtog/gtog.github.com.git/figs/var_part2_markdown.RMD/plotAllData4.png) 
+![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotAllData4.png) 
 
 
 ### Summing up...  
