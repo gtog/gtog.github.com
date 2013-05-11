@@ -7,6 +7,7 @@ tags: [finance, VaR, R, PerformanceAnalytics, quantmod, knitr, tail risk]
 ---
 {% include JB/setup %}
 
+
 Adam Duncan, December 2012
 
 ## Prelude
@@ -131,7 +132,7 @@ plot.xts(ret.skew, las = 1, main = "Rolling Skewness", cex.main = 0.9)
 plot.xts(ret.kurt, las = 1, main = "Rolling Kurtosis", cex.main = 0.9)
 {% endhighlight %}
 
-![center](/figs/var_part1_markdown.RMD/plotMoments.png) 
+![center](http://gtog.github.io/figs/var_part1_markdown.RMD/plotMoments.png) 
 
 
 Great. All seems to be in order. One more to go...the rolling VaR estimates.  
@@ -151,7 +152,7 @@ par(mfrow = c(1, 1))
 plot.xts(ret.var, las = 1, main = "Rolling VaR Estimate", cex.main = 0.9)
 {% endhighlight %}
 
-![center](/figs/var_part1_markdown.RMD/plotVaR.png) 
+![center](http://gtog.github.io/figs/var_part1_markdown.RMD/plotVaR.png) 
 
 
 Now that we have the rolling VaR series, we can calculate the ratios of *actual returns* to VaR  
@@ -198,7 +199,7 @@ plot(var.breaks, las = 1, main = "Actual Negative Return(t) / Daily VaR Estimate
     cex.main = 0.9)  # line plot of the breaks.
 {% endhighlight %}
 
-![center](/figs/var_part1_markdown.RMD/varBreaks.png) 
+![center](http://gtog.github.io/figs/var_part1_markdown.RMD/varBreaks.png) 
 
 
 For USDMXN, we can see that 2008 was 11x daily value at risk. Other, smaller crisis   
@@ -211,7 +212,7 @@ Here is a histogram of the VaR breaks for USDMXN:
 hist(var.breaks, main = "Histogram of VaR Breaks (Multiples of Daily VaR", cex.main = 0.9)  # histogram of the VaR breaks.
 {% endhighlight %}
 
-![center](/figs/var_part1_markdown.RMD/histogramUSDMXN.png) 
+![center](http://gtog.github.io/figs/var_part1_markdown.RMD/histogramUSDMXN.png) 
 
 
 Now we can just loop through each of the data series we imported and run  
@@ -326,7 +327,7 @@ plot.xts(subset(v, subset = (v < 0)), las = 1, main = "Rolling Historical VaR Br
     ylab = "Raito of Actual (Neg) Returns to VaR")
 {% endhighlight %}
 
-![center](/figs/var_part1_markdown.RMD/plotVarfun.png) 
+![center](http://gtog.github.io/figs/var_part1_markdown.RMD/plotVarfun.png) 
 
 
 If you just have a bunch of tickers and want to see a summary of the VaR breaks, this will do it.  
