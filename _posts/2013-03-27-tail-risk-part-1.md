@@ -1,5 +1,12 @@
-Measuring the Intensity of Historical Crises with VaR
-========================================================
+---
+layout: post
+title: "Measuring the Intensity of Historical Crises with VaR"
+description: "Part 1 of a multi-part look at tail risk."
+category: finance
+tags: [finance, VaR, R, PerformanceAnalytics, quantmod, knitr, tail risk]
+---
+{% include JB/setup %}
+
 Adam Duncan, December 2012
 
 ## Prelude
