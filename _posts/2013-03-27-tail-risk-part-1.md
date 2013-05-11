@@ -1,12 +1,5 @@
----
-layout: post
-title: "Measuring the Intensity of Historical Crises with VaR"
-description: "Part 1 of a multi-part look at tail risk."
-category: finance
-tags: [finance, VaR, R, PerformanceAnalytics, quantmod, knitr, tail risk]
----
-{% include JB/setup %}
-
+Measuring the Intensity of Historical Crises with VaR
+========================================================
 Adam Duncan, December 2012
 
 ## Prelude
@@ -59,88 +52,15 @@ Libararies we'll need (and all dependencies, naturally)...
 *knitr
 
 
-{% highlight text %}
-## Loading required package: zoo
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Attaching package: 'zoo'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## The following object is masked from 'package:base':
-## 
-## as.Date, as.Date.numeric
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Version 0.4-0 included new data defaults. See ?getSymbols.
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Package PerformanceAnalytics (1.1.0) loaded. Econometric tools for
-## performance and risk analysis. (c) 2004-2012 Peter Carl, Brian G.
-## Peterson. License: GPL
-## http://r-forge.r-project.org/projects/returnanalytics/
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Attaching package: 'PerformanceAnalytics'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## The following object is masked from 'package:graphics':
-## 
-## legend
-{% endhighlight %}
 
 
 We need to get some data from FRED database and set some initial parameters...  
 
-{% highlight text %}
-## Warning: downloaded length 275599 != reported length 200
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: downloaded length 608301 != reported length 200
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: downloaded length 68545 != reported length 200
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: downloaded length 56610 != reported length 200
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: downloaded length 124452 != reported length 200
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: downloaded length 95773 != reported length 200
+{% highlight r %}
+tickers = c("SP500", "DJIA", "DEXUSEU", "DSWP5", "DCOILWTICO", "DEXMXUS")
+for (i in 1:length(tickers)) {
+    suppressWarnings(getSymbols(tickers[i], src = "FRED", auto.assign = TRUE))
+}
 {% endhighlight %}
 
 Let's just focus on one data set for the moment. For example, let's choose USDMXN. For this post,  
