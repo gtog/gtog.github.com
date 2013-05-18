@@ -9,6 +9,7 @@ tags: [finance, VaR, R, PerformanceAnalytics, quantmod, knitr, tail risk]
 
 
 Adam Duncan, December 2012
+
 Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")
 
 ## Prelude
