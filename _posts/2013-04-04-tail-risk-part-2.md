@@ -8,6 +8,7 @@ tags: [finance, VaR, R, PerformanceAnalytics, quantmod, knitr, tail risk]
 {% include JB/setup %}
 
 Adam Duncan, December 2012
+Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")
 
 If you missed the first part of this analysis, be sure to check it out on gtog.github.com.  
 In this part of the analyis, I'm going to look at the actual 1 day negative returns / VaR estimates  
