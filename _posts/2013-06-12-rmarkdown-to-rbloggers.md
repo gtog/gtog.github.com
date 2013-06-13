@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Creating Jekyll blog posts from R."
+description: "Creating Jekyll blog posts from R."
+category: Workflow
+tags: [Jekyll, Jekyll Bootstrap, knitr, Feedburner, R-bloggers]
+---
+{% include JB/setup %}
 
 Adam Duncan
 Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")  
