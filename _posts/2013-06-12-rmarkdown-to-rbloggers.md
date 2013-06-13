@@ -1,11 +1,3 @@
----
-layout: post
-title: "Creating Jekyll blog posts from R Markdown that are also R-Blogger friendly."
-description: "Creating Jekyll blog posts from R Markdown that are also R-Blogger friendly."
-category: workflow
-tags: [workflow, Feedburner, Jekyll, R-Bloggers]
----
-{% include JB/setup %}
 
 Adam Duncan
 Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")  
@@ -37,25 +29,39 @@ For R-bloggers who want to post from Jekyll, you only need to do the following:
 *  Minimally, this script should contain the following code:  
 
 
+{% highlight r %}
+myjekyllsite = c("http://YOURBLOGNAME.github.io/")
+
+KnitPost <- function(input, base.url = myjekyllsite) {
+    require(knitr)
+    opts_knit$set(base.url = base.url)
+    fig.path <- paste0("figs/", sub(".Rmd$", "", basename(input)), "/")
+    opts_chunk$set(fig.path = fig.path)
+    opts_chunk$set(fig.cap = "center")
+    render_jekyll()
+    knit(input, envir = parent.frame())
+}
+
+KnitPost("YOURNEWPOST.Rmd")
+{% endhighlight %}
+
+
 *  Move the resulting image folder (called 'figs') to your local git repository for your Jekyll site.  
 *  Move the resulting markdown file to your local _posts folder for your Jekyll site.
-*  Add YML front matter to the head of the newly generated markdown file using your favorite text editor. 
-*  Note: You need to set the "base url" in the KnitPost() function to the full blog site URL or the Feedburner feed won't  
+*  Add YML front matter to the head of the newly generated markdown file. 
+*  Note: You need to set the "base url" in the code to the full blog site URL or the Feedburner feed won't  
 pick up the images in the "fig" folder.
 
 You only need to create the R Script with the Knitpost function once. You can then just pass your .Rmd blogposts
 file name to your KnitPost() function and you'll get a nice folder with all your graphics and a new .md file you can
 edit before publishing to the web. 
 
-Push your local changes and check out your new blog post. You should also head over to Feedburner and check your
+Push your local changes and check out your new blog post. You should head over to Feedburner and check your
 feed. You should see a nice complete post with graphics, embedded code, and whatever else you put in your post.
 And, your new post will play nicely with R-bloggers.  
 
 If you're feeling motivated, you could modify the KnitPost() function to automatically add the appropriate  
 YML front matter to the post. This would save time having to add it manually after the .md file is generated.
-If I have time, I'll do that and post it up on github. 
-
-Thanks for reading.
 
 
 
