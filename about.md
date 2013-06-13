@@ -12,8 +12,6 @@ The title of this site is a reference to modern statistics origins at the Guines
 work of [William Sealy Gosset](http://en.wikipedia.org/wiki/William_Sealy_Gosset), whose pen name "Student" is famous in the literature.  And of course my love of the beautiful brown liquid they produce. For those intereseted in the history of statistics and its
 influence on modern science, I highly recommend David Salsburg's book [The Lady Tasting Tea.](http://www.amazon.com/dp/0805071342/?tag=googhydr-20&hvadid=7782417427&hvpos=1t1&hvexid=&hvnetw=g&hvrand=2033946875574972504&hvpone=12.91&hvptwo=&hvqmt=b&ref=pd_sl_7e3tmf0o8p_b)
 
-*I am currently unemployed and looking for work. My resume is below. Feel free to contact me and thanks for reading!*
-
  
 ###EXPERTISE
 Derivatives · New product development · Sustainable Cost Reduction · Programming · Research · Data Visualization  · Risk-management · Foreign Exchange · Fixed Income Derivatives
