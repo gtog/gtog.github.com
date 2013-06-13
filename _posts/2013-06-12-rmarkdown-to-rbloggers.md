@@ -23,11 +23,10 @@ that takes care of a creating Jekyll blog posts from R. Jason gives a step-by-st
 embedding R code in a Jekyll blog post [here](http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/).  
 
 For R-bloggers who want to post from Jekyll, you only need to do the following:  
-1. Create your R Markdown document with embedded code and graphics. Follow standard R Markdown syntax.  
-*  Save this R Markdown file on your local machine.  
-*  Create an new R Script and call it whatever you like. Mine is "makeBlogPostfromRMarkdown.R"  
-*  Minimally, this script should contain the following code:  
-
+* Create your R Markdown document with embedded code and graphics. Follow standard R Markdown syntax.  
+* Save this R Markdown file on your local machine.  
+* Create an new R Script and call it whatever you like. Mine is "makeBlogPostfromRMarkdown.R"  
+* Minimally, this script should contain the following code:
 
 {% highlight r %}
 myjekyllsite = c("http://YOURBLOGNAME.github.io/")
@@ -45,15 +44,14 @@ KnitPost <- function(input, base.url = myjekyllsite) {
 KnitPost("YOURNEWPOST.Rmd")
 {% endhighlight %}
 
-
-*  Move the resulting image folder (called 'figs') to your local git repository for your Jekyll site.  
-*  Move the resulting markdown file to your local _posts folder for your Jekyll site.
-*  Add YML front matter to the head of the newly generated markdown file. 
-*  Note: You need to set the "base url" in the code to the full blog site URL or the Feedburner feed won't  
+* Move the resulting image folder (called 'figs') to your local git repository for your Jekyll site.  
+* Move the resulting markdown file to your local _posts folder for your Jekyll site.
+* Add YML front matter to the head of the newly generated markdown file. 
+* Note: You need to set the "base url" in the code to the full blog site URL or the Feedburner feed won't  
 pick up the images in the "fig" folder.
 
 You only need to create the R Script with the Knitpost function once. You can then just pass your .Rmd blogposts
-file name to your KnitPost() function and you'll get a nice folder with all your graphics and a new .md file you can
+filename to your KnitPost() function and you'll get a nice folder with all your graphics and a new .md file you can
 edit before publishing to the web. 
 
 Push your local changes and check out your new blog post. You should head over to Feedburner and check your
