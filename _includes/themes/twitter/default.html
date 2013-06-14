@@ -47,16 +47,13 @@
     </div>
 
     <div class="container-narrow">
-    <div class="row-fluid">
-      <div class="span8">
         <div class="content">
         {{ content }}
-      </div>
+        </div>
     </div>
-      <div class="span4">
-        {% include sidebar.html %}
+      <div class="sidebar">
+        {% include themes/twitter/sidebar.html %}
       </div>
-    </div>
       <hr>
       <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
@@ -64,9 +61,6 @@
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
       </footer>
-
-    </div>
-
     {% include JB/analytics %}
   </body>
 </html>
