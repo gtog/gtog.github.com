@@ -1,6 +1,6 @@
 /* Custom container */
 .container-narrow {
-  margin: 200px auto;
+  margin: 0 auto;
   max-width: 700px;
 }
 
@@ -68,7 +68,6 @@
 
   .sidebar{
     float: right;
-    clear: right;
     max-height: 100%;
     max-width:12%;
     margin-right: 100px;
