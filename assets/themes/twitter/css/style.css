@@ -68,6 +68,7 @@
 
   .sidebar{
     float: right;
+    position: relative;
     max-height: 100%;
     max-width:12%;
     margin-right: 100px;
