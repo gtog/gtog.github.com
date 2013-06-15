@@ -1,7 +1,6 @@
 /* Custom container */
 .container-narrow {
-  margin: 0 auto;
-  max-width: 650px;
+  margin: 0 30px;
 }
 
 .container-narrow > hr {
@@ -68,17 +67,10 @@
 
   .sidebar{
     float: right;
-    position: relative;
     clear: right;
-    max-height: 100%;
-    max-width:15%;
-    margin-right: 100px;
-    padding: 10px;
     background: inherit;
-    border-radius: 5px;
     color: #5A7EA3;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    overflow: inherit;
   }
 
   .sidebar > p{
