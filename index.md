@@ -13,16 +13,9 @@ tagline: ""
 	<a href="http://feedburner.google.com/fb/a/mailverify?uri=FromGuinnessToGARCH&amp;loc=en_US">Subscribe via email here.</a>
 </div>
 
-This blog is a place where I post articles I have written about topics in finance,  
-data visualization, R, hacking, workflow, and other data and information projects.  
-I have a B.S. in Information and Decision Systems from Carnegie Mellon and a Masters  
-of Science in Inustrial Administration from the (then Carnegie Mellon Graduate School  
-of Industrial Administration, now Tepper School of Business). I have worked on fixed  
-income trading floors since 1995. I am a derivatives structurer by trade.   
+This blog is a place where I post articles I have written about topics in finance, data visualization, R, hacking, workflow, and other data and information projects. I have a B.S. in Information and Decision Systems from Carnegie Mellon and a Masters of Science in Inustrial Administration from the (then Carnegie Mellon Graduate School of Industrial Administration, now Tepper School of Business). I have worked on fixed income trading floors since 1995. I am a derivatives structurer by trade.  
 
-I hope you find the posts here useful in your own work. Feel free to access any of the   
-files in my [github](https://github.com/gtog) repositories. This site is hosted on github
-using Jekyll and Jekyll Bootstrap.  
+I hope you find the posts here useful in your own work. Feel free to access any of the files in my [github](https://github.com/gtog) repositories. This site is hosted on github using Jekyll and Jekyll Bootstrap.
 
 Enjoy!  
 
@@ -40,8 +33,7 @@ Please check out [R-bloggers.com](http://www.r-bloggers.com) for more awesome po
 
 
 ### Contact me:
-Feel free to contact me with comments. 
-Check out the "About Me" tab for more  details about my background or head over to my profile on Linked In.  
+Feel free to contact me with comments. Check out the "About Me" tab for more  details about my background or head over to my profile on Linked In.  
 <a href="http://www.linkedin.com/in/adamcduncan">
  	<img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Adam Duncan's profile on LinkedIn">
  </a>.
