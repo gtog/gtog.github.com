@@ -10,11 +10,10 @@ tags: [finance, Volatility, R, Regime Switching, strategy, clustering]
 
 This is a 'do over' of a project I started while at my former employer in the fall of 2012. I presented part 1 of this framework at the FX Invest West Coast conference on September 11, 2012. I have made some changes and expanded the analysis since then. Part 2 is complete and will follow this post in the week or so.  
 
-
 Adam Duncan September, 2012  
 Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")  
 
-Part 1: Constructing a Regime Framework  
+Part 1: Constructing a Regime Framework
 -----------------------------------
   
 ### Motivation  
@@ -39,7 +38,7 @@ In addition, we will try to estimate a more formal regime swithcing model to see
 Volatiltiy regimes are nothing more than states of the world defined by volatility characteristics.
 What sort of characteristics? Well, in this framework, we consider 2 factors: (1) level of volatility and
 (2) the term structure or slope. These 2 factors give us a lot of information about what state the world is
-currently in.
+currently in.  
 
 In a simple 4 state world, we might let each of our 2 factors take on 2 levels each. For example,
 vol levels might be (1) High or (2) Low  and our term structure of vol might be (1) Steep or (2) Flat.
@@ -60,7 +59,7 @@ Currency Pair: EURUSD
 
 Note that you could average together, say, all of the G-10 and EM vols together and use some composite vol index as your term structure and level variables. At least as far as G-10 vols go, the results do not differ significantly from just using EURUSD vol.  
 
-#### A Visual Inspection  
+#### A Visual Inspection
 
 Before I get too far in any analysis, I like to make a visual inspection of the data.  This is always useful and can reveal problems or new ideas before too much work has been done. Let's do that here:  
 
@@ -71,12 +70,11 @@ The visual inspection of the data reveals that our simple 2 levels per factor as
 
 #### A Shallow Dive into the Realm of Cluster Analysis  
 The first thing we'll want to do is to standardize our variables by transforming them into z-score measures. 
-This is always a useful thing to do when dealing with variables of vastly different bases. It also makes us  
-level agnostic, which is a good thing.  
+This is always a useful thing to do when dealing with variables of vastly different bases. It also makes us level agnostic, which is a good thing.  
 
-Rather than going through each day in history and deciding whether that day was STEEP or FLAT and HIGH or LOW, we can employ a simple clustering algorithm to split up our standardized variables into an arbitrary number of groups. In this case we have 2 groupings per factor. So, we can use a k-means clustering algorithm with 2 means per factor to split each factor into groups.
+Rather than going through each day in history and deciding whether that day was STEEP or FLAT and HIGH or LOW, we can employ a simple clustering algorithm to split up our standardized variables into an arbitrary number of groups. In this case we have 2 groupings per factor. So, we can use a k-means clustering algorithm with 2 means per factor to split each factor into groups.  
 
-#### Is our 2 Levels per Factor (4-State World) Appropriate?  
+#### Is our 2 Levels per Factor (4-State World) Appropriate?
 
 One natural question is,"Have we selected the right number of levels for each factor?" What if some other number of groupings is more appropriate for each of our factors? There is a way to determine the appropriate number of groupings for a given factor. It's very similar to using a scree plot in PCA to determine the number of principal components you want to use. By iteratively running the k-means clustering algorithm with a variable number of means, we can examine the sum of squared distances between the elements of each group.If we plot the results, we'll get something like this:  
 

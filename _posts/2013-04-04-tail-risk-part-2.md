@@ -11,24 +11,13 @@ Adam Duncan, December 2012
 Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")  
 
 If you missed the first part of this analysis, be sure to check it out on gtog.github.com.  
-In this part of the analyis, I'm going to look at the actual 1 day negative returns / VaR estimates  
-("VaR breaks") across a numnber of different asset classes. The hope is to arrive at some general  
-conclusions about how big historical events have been as measured by a simple VaR metric. Armed with this  
-information, we can start to think about how to craft a reasonable tail risk hedging strategy. Crafting  
-a good tail risk hedging strategy involves a lot more than what we're going to examine here, but this is  
-where the foundation for a good program lies. You have to know the potential magintudes of various events  
-before you can correctly size and design a good hedging program.   
+In this part of the analyis, I'm going to look at the actual 1 day negative returns / VaR estimates ("VaR breaks") across a numnber of different asset classes. The hope is to arrive at some general conclusions about how big historical events have been as measured by a simple VaR metric. Armed with this information, we can start to think about how to craft a reasonable tail risk hedging strategy. Crafting a good tail risk hedging strategy involves a lot more than what we're going to examine here, but this is where the foundation for a good program lies. You have to know the potential magintudes of various events before you can correctly size and design a good hedging program.  
 
 I also promised to clean up the summary function in a faster format. So, here goes.  
 
-As usual, import some libraries:
-
-
-
 ### Setting up the data
 
-Let's go out and get the data we want to examine. This time we'll put each of the data elements in a list.  
-We can pass this list of variables to our new summary functions.  
+Let's go out and get the data we want to examine. This time we'll put each of the data elements in a list. We can pass this list of variables to our new summary functions.  
 
 {% highlight r %}
 tickers.equity = c("SP500", "DJIA")  # SP500 and DJIA
@@ -36,7 +25,6 @@ tickers.fx = c("DEXUSEU", "DEXMXUS", "DEXUSAL", "DEXJPUS", "DEXKOUS")  # EURUSD,
 tickers.commod = c("DCOILWTICO", "GOLDAMGBD228NLBM", "DCOILBRENTEU")  # WTI and Gold
 tickers.rates = c("DSWP2", "DSWP10", "DSWP30")  # 2,10, and 30 yr US swap rates.
 {% endhighlight %}
-
 
 We'll also need a getData() function to help with getting all the data into our workspace:  
 
@@ -70,12 +58,8 @@ data.rates <- list(DSWP2, DSWP10, DSWP30)
 
 
 ### Redacting our summary function...
-As promised in [Part 1](http://gtog.github.com/finance/2013/03/27/tail-risk-part-1/), let's re-write the    
-summary function to be a little more flexible and a little more efficient. First we need to make sure  
-we have access to the varFun function from Part 1...  
 
-
-
+As promised in [Part 1](http://gtog.github.com/finance/2013/03/27/tail-risk-part-1/), let's re-write the summary function to be a little more flexible and a little more efficient. First we need to make sure we have access to the varFun function from Part 1...  
 
 Now we can re-write the summary function, vsum()...   
 
@@ -106,8 +90,6 @@ vsum <- function(datalist, p, window, method, inv.var, draw) {
 }
 {% endhighlight %}
 
-
-
 ### Plotting historical VaR Breaks  
 
 Let's make use of our new summary function and look at just the FX data:  
@@ -124,26 +106,19 @@ vb.summary <- vsum(data.fx, 0.95, 1260, method = "historical", inv.var = FALSE,
 vb.summary
 {% endhighlight %}
 
-
-
 {% highlight text %}
-##      name max.ratio mean.ratio median.ratio
-## 1 DEXUSEU    -2.959    -0.4664      -0.3529
-## 2 DEXMXUS   -11.083    -0.4850      -0.3397
-## 3 DEXUSAL   -80.792    -0.5614      -0.3661
-## 4 DEXJPUS    -9.259    -0.4852      -0.3408
-## 5 DEXKOUS   -32.176    -0.6584      -0.3133
+      name max.ratio mean.ratio median.ratio
+ 1 DEXUSEU    -2.959    -0.4664      -0.3529
+ 2 DEXMXUS   -11.083    -0.4850      -0.3397
+ 3 DEXUSAL   -80.792    -0.5614      -0.3661
+ 4 DEXJPUS    -9.259    -0.4852      -0.3408
+ 5 DEXKOUS   -32.176    -0.6584      -0.3133
 {% endhighlight %}
 
 ![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotFXData3.png) 
 
 
-The AUDUSD data looks a little suspicious with a -80x VaR realization. That probably merits some investigation.  
-Our new summary function gives us the ability to produce a table of VaR breaks, some summary statistics about  
-the breaks, and plot the breaks if we want. Let's run the whole lot so we can see the table of the breaks and  
-the associated plots.  
-Warning: Running them all will take a little while. Actually, let's go ahead and do that and time the code:  
-
+The AUDUSD data looks a little suspicious with a -80x VaR realization. That probably merits some investigation. Our new summary function gives us the ability to produce a table of VaR breaks, some summary statistics about the breaks, and plot the breaks if we want. Let's run the whole lot so we can see the table of the breaks and the associated plots. Warning: Running them all will take a little while. Actually, let's go ahead and do that and time the code:   
 
 {% highlight r %}
 ptm <- proc.time()
@@ -155,12 +130,9 @@ vb.summary <- vsum(data.master, 0.95, 1260, method = "historical", inv.var = FAL
 {% endhighlight %}
 
 
-
 {% highlight text %}
 ## Warning: missing values removed from data
 {% endhighlight %}
-
-
 
 {% highlight text %}
 ## Warning: missing values removed from data
@@ -178,19 +150,13 @@ vb.summary <- vsum(data.master, 0.95, 1260, method = "historical", inv.var = FAL
 ## Warning: missing values removed from data
 {% endhighlight %}
 
-
-
 {% highlight text %}
 ## Warning: missing values removed from data
 {% endhighlight %}
 
-
-
 {% highlight text %}
 ## Warning: missing values removed from data
 {% endhighlight %}
-
-
 
 {% highlight text %}
 ## Warning: missing values removed from data
@@ -202,14 +168,10 @@ vb.summary <- vsum(data.master, 0.95, 1260, method = "historical", inv.var = FAL
 proc.time() - ptm
 {% endhighlight %}
 
-
-
 {% highlight text %}
 ##    user  system elapsed 
 ##  434.11    0.09  437.07
 {% endhighlight %}
-
-
 
 {% highlight r %}
 par(mfrow = c(1, 1))
@@ -217,53 +179,38 @@ par(mfrow = c(1, 1))
 
 ![center](http://gtog.github.io/figs/var_part2_markdown.RMD/plotAllData4.png) 
 
-
 ### Summing up...  
-So what do the different crises look like on average from a 95% historical VaR perspective? Meaning,  
-on average, how bad would we have done if we were using a simple VaR framework to estimate our 1-day tail risk?  
+So what do the different crises look like on average from a 95% historical VaR perspective? Meaning, on average, how bad would we have done if we were using a simple VaR framework to estimate our 1-day tail risk?  
 
 {% highlight r %}
 vb.summary
 {% endhighlight %}
 
-
-
 {% highlight text %}
-##                name max.ratio mean.ratio median.ratio
-## 1             SP500   -16.574    -0.4979      -0.3508
-## 2              DJIA   -23.045    -0.4810      -0.3312
-## 3           DEXUSEU    -2.959    -0.4664      -0.3529
-## 4           DEXMXUS   -11.083    -0.4850      -0.3397
-## 5           DEXUSAL   -80.792    -0.5614      -0.3661
-## 6           DEXJPUS    -9.259    -0.4852      -0.3408
-## 7           DEXKOUS   -32.176    -0.6584      -0.3133
-## 8        DCOILWTICO    -9.326    -0.4761      -0.3401
-## 9  GOLDAMGBD228NLBM   -12.074    -0.4904      -0.3239
-## 10     DCOILBRENTEU    -5.043    -0.4817      -0.3583
-## 11            DSWP2    -6.183    -0.5875      -0.4046
-## 12           DSWP10    -9.708    -0.5826      -0.4122
-## 13           DSWP30    -8.602    -0.6145      -0.4517
+                name max.ratio mean.ratio median.ratio
+ 1             SP500   -16.574    -0.4979      -0.3508
+ 2              DJIA   -23.045    -0.4810      -0.3312
+ 3           DEXUSEU    -2.959    -0.4664      -0.3529
+ 4           DEXMXUS   -11.083    -0.4850      -0.3397
+ 5           DEXUSAL   -80.792    -0.5614      -0.3661
+ 6           DEXJPUS    -9.259    -0.4852      -0.3408
+ 7           DEXKOUS   -32.176    -0.6584      -0.3133
+ 8        DCOILWTICO    -9.326    -0.4761      -0.3401
+ 9  GOLDAMGBD228NLBM   -12.074    -0.4904      -0.3239
+ 10     DCOILBRENTEU    -5.043    -0.4817      -0.3583
+ 11            DSWP2    -6.183    -0.5875      -0.4046
+ 12           DSWP10    -9.708    -0.5826      -0.4122
+ 13           DSWP30    -8.602    -0.6145      -0.4517
 {% endhighlight %}
-
-
 
 {% highlight r %}
 mean(vb.summary$max.ratio, trim = 0.1)
 {% endhighlight %}
 
-
-
 {% highlight text %}
 ## [1] -13.01
 {% endhighlight %}
 
-
-So, throwing out the 10% best and worst cases for the VaR breaks, we get a trimmed mean of -12.5x VaR.  
-From a visual inspection of the data, it would appear that for non-equity asset classes, somewhere between  
-5-9x daily VaR seems to capture the worst case scenario for 1 day negative excessions. Equities and high beta  
-FX pairs would fall somewhere in the 12-18x VaR range. Well, that's all for now. In the next part, we'll examine  
-the duration aspect of crises. How long does it take to get to the bottom of an average crisis?  
-How large are the cumulative drawdowns on average and how long does it take to get back to flat on average?  
+So, throwing out the 10% best and worst cases for the VaR breaks, we get a trimmed mean of -12.5x VaR. From a visual inspection of the data, it would appear that for non-equity asset classes, somewhere between 5-9x daily VaR seems to capture the worst case scenario for 1 day negative excessions. Equities and high beta FX pairs would fall somewhere in the 12-18x VaR range. Well, that's all for now. In the next part, we'll examine the duration aspect of crises. How long does it take to get to the bottom of an average crisis? How large are the cumulative drawdowns on average and how long does it take to get back to flat on average?
 
 Thanks for reading!
-

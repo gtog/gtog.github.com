@@ -14,16 +14,9 @@ Also avilable on [R-bloggers.com](http://www.r-bloggers.com "R-bloggers.com")
 Strategy Implications  
 ---------------------------------
 
-In this part of the volatility regimes analysis, we'll use the regime identification framework  
-established in part 1 to draw conclusions about which strategies work best is each regime.  
-That should prove useful to us and goes a long way to answering the question, "What strategies should I   
-be pursuing right now?"  
+In this part of the volatility regimes analysis, we'll use the regime identification framework established in part 1 to draw conclusions about which strategies work best is each regime. That should prove useful to us and goes a long way to answering the question, "What strategies should I be pursuing right now?"  
 
-This first thing we need to do is assemble some strategies. We'll use rules-based strategies as our  
-potential candidates. There are many such strategies available. Almost every investment bank has a whole  
-suite of these products available for users to access. The strategies run the gammut from carry to momentum to  
-relative value. People who design hedge fund replication strategies have boiled down the money making  
-process into basically 5 broad categories:  
+This first thing we need to do is assemble some strategies. We'll use rules-based strategies as our potential candidates. There are many such strategies available. Almost every investment bank has a whole suite of these products available for users to access. The strategies run the gammut from carry to momentum to relative value. People who design hedge fund replication strategies have boiled down the money making process into basically 5 broad categories:  
 
 1. Momentum  
 2. Carry  
@@ -31,11 +24,7 @@ process into basically 5 broad categories:
 4. Volatility  
 5. Multi-strat / Alpha  
 
-Rules-based strategies have been designed to pursue each of these strategies, some more complicated than  
-others, but all designed to operate within a pre-defined set of rules and procedures. This is good because  
-it eliminates concerns about style drift and other considerations which might confound our conclusions about  
-how various strategies perform in different states of the world. Additionally, the investible world is usually  
-broken down into asset classes that look something like: 
+Rules-based strategies have been designed to pursue each of these strategies, some more complicated than others, but all designed to operate within a pre-defined set of rules and procedures. This is good because it eliminates concerns about style drift and other considerations which might confound our conclusions about how various strategies perform in different states of the world. Additionally, the investible world is usually broken down into asset classes that look something like: 
 
 1. Equities  
 2. Fixed Income  
@@ -43,13 +32,9 @@ broken down into asset classes that look something like:
 4. FX  
 5. Emerging Markets  
 
-Some strategies operate across all asset classes simultaneously. With 5 strategy types and 5 asset classes,  
-we are well armed to put together a collection of strategies that we can test across the possible states  
-of the world as defined by our volatility regime framework.  
+Some strategies operate across all asset classes simultaneously. With 5 strategy types and 5 asset classes, we are well armed to put together a collection of strategies that we can test across the possible states of the world as defined by our volatility regime framework.  
 
-I have familiarity with rules based strategies designed by JP Morgan and Credit Suisse. Other banks have  
-extensive collections as well. I'll limit my choices to those I am familar with. All of this data is available  
-via Bloomberg (tickers are listed). Here are the strategies (including the asset class) that we'll examine:  
+I have familiarity with rules based strategies designed by JP Morgan and Credit Suisse. Other banks have extensive collections as well. I'll limit my choices to those I am familar with. All of this data is available via Bloomberg (tickers are listed). Here are the strategies (including the asset class) that we'll examine:  
 
 * Momentum - Equity - AIJPMEUU (USD)  
 * Momentum - FX - AIJPMF1U (USD)  
@@ -66,47 +51,11 @@ via Bloomberg (tickers are listed). Here are the strategies (including the asset
 * Value - Equities (CS HOLT RAII) - RAIIHRVU  
 * Value - Commodities (CS GAINS) - CSGADLSE  
 
-That's a reasonably comprehensive basket of strategy types and asset classes that should allow us to draw  
-some insight. You can always backtest your own favorite strategy and analyze it across the various regimes.  
-But for now, these readily available strategies should suffice to give us direction. I've imported data starting  
-in 1994. For almost all of the indices, this time period encapsulates all the available data.  
-Note, however that our first volatility information from Part 1 doesn't start until 28-Dec-1998. So, the  
-analysis will have an effective start date of 28-Dec-1998. 
+That's a reasonably comprehensive basket of strategy types and asset classes that should allow us to draw some insight. You can always backtest your own favorite strategy and analyze it across the various regimes.But for now, these readily available strategies should suffice to give us direction. I've imported data starting in 1994. For almost all of the indices, this time period encapsulates all the available data. Note, however that our first volatility information from Part 1 doesn't start until 28-Dec-1998. So, the analysis will have an effective start date of 28-Dec-1998. 
 
+Some of the time series are disappointingly short. We may have to disqualify them on the basis of not crossing enough regimes. But for now, we'll leave everything in and plow ahead. We can exclude the shorter series when we aggregate the results. Regime snippets shorter than 20 days are discarded in the analysis Anything in the tables that shows up as NA or NaN, is something that was just too short to provide meaningful insight. Returns and standard deviations are all annualized.  
 
-{% highlight text %}
-## Version 0.4-0 included new data defaults. See ?getSymbols.
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Package PerformanceAnalytics (1.1.0) loaded. Econometric tools for
-## performance and risk analysis. (c) 2004-2012 Peter Carl, Brian G.
-## Peterson. License: GPL
-## http://r-forge.r-project.org/projects/returnanalytics/
-{% endhighlight %}
-
-
-
-
-
-Some of the time series are disappointingly short. We may have to disqualify them on the basis of not crossing  
-enough regimes. But for now, we'll leave everything in and plow ahead. We can exclude the shorter series when we  
-aggregate the results. Regime snippets shorter than 20 days are discarded in the analysis. Anything in the tables  
-that shows up as NA or NaN, is something that was just too short to provide meaningful insight. Returns and standard  
-deviations are all annualized. 
-
-The first thing we'll do is base all the indices to 100 so we can see the proper evolution  
-of each index. Each index will grow from 100 at a rate driven by it's daily log returns. Then,  
-we'll examine the returns of each index during each of the identified volatility regimes. From there,  
-we can decide which strategies do best and when. Here are the unconditional returns for each strategy  
-(decreasing order by Information Ratio):
-
-
-
-
-
+The first thing we'll do is base all the indices to 100 so we can see the proper evolution of each index. Each index will grow from 100 at a rate driven by it's daily log returns. Then, we'll examine the returns of each index during each of the identified volatility regimes. From there, we can decide which strategies do best and when. Here are the unconditional returns for each strategy (decreasing order by Information Ratio):  
 {% highlight text %}
          ann.return ann.stddev info.ratio          strat.type
 CSEARVIX   0.110052    0.05735    1.91881          VIX Vol RV
@@ -125,26 +74,9 @@ AIJPMCEU  -0.045902    0.28178   -0.16290  Commodity Momentum
 CSVILEUS  -0.014686    0.06444   -0.22789    Long Only FX Vol
 {% endhighlight %}
 
-
-
-
-
-
-
-
-Ok. Let's get down to the hard work of calculating all the return snippets for each of our possible states.  
-Recall that there are 9 possible states, though our sample only has 8 of the possible 9 present. Recall also that  
-we have 14 different indices to run across all of the possible states. Great care has to be taken to calculate,  
-track, and assemble the return episdoes by state and strategy. After some difficult calculation and assembly, we  
-can have a look at the information ratios by strategy, by regime: (Recall that we had no observations for "FL" in  
-our sample. The "FM" regime also did not have any episodes longer than our 20 day minimum constraint. Annualizing  
-returns from very short episodes is misleading. So, those 2 entries in our table are blank.)  
-
-
-
+Ok. Let's get down to the hard work of calculating all the return snippets for each of our possible states. Recall that there are 9 possible states, though our sample only has 8 of the possible 9 present. Recall also that we have 14 different indices to run across all of the possible states. Great care has to be taken to calculate, track, and assemble the return episdoes by state and strategy. After some difficult calculation and assembly, we can have a look at the information ratios by strategy, by regime: (Recall that we had no observations for "FL" in our sample. The "FM" regime also did not have any episodes longer than our 20 day minimum constraint. Annualizing returns from very short episodes is misleading. So, those 2 entries in our table are blank.)  
 
 ![center](http://gtog.github.io/figs/volregimes_part2_knitr/showStrategyGrid.png) 
-
 
 ### Regime Perscriptions  
 
@@ -157,12 +89,12 @@ Let's focus in on the current regime, "SL", and see what the data tells us about
 *What does the model say about expectations for how long this regime will last?  
 
 The current regime (“Steep/Low” or “S/L”) began on October 11, 2012. As of January 11th, the time the data set was last updated, the current regime was 67 days old. The plot here shows the number of “SL” occurances in the sample by length of each occurence. So, we have seen 1 day “SL” regimes 23 times (those are excluded in the broader analysis). Similarly, we have seen an “SL” regime of 81 days length exactly 1 time in the sample. The current regime is getting a bit long in the tooth with respect to most occurrences observed in the data. Indeed, we have only seen 1 longer “SL” regime (the 81 day episode just mentioned).  
-![center](http://gtog.github.io/figs/volregimes_part2_knitr/regimeLength.png) 
 
+![center](http://gtog.github.io/figs/volregimes_part2_knitr/regimeLength.png) 
 
 Recall the Total Length of Stay estimates from section 2.3 in Part 1. The total number of days we expect to spend in “SL” over the next year was estimated at 43 days. We have already exceeded that estimate by 24 days as January 11th and, as of today have exceeded even the longest “SL” regime observed in the sample. The upper-limit of the 97.5% quantile for the SL total length of stay estimate is 66 days. 
 
-Here are the information ratios for each of the strategies, conditional on being in an "SL" regime [full sample:1998-present]: 
+Here are the information ratios for each of the strategies, conditional on being in an "SL" regime [full sample:1998-present]:  
 
 {% highlight text %}
      ticker  metric       strategy.type
@@ -183,14 +115,14 @@ Here are the information ratios for each of the strategies, conditional on being
 {% endhighlight %}
 
 We can highlight the performance of the best performing “SL” strategy, Equity Implied vs. Realized Vol, only during “SL” regime epsiodes, as shown here:  
+
 ![center](http://gtog.github.io/figs/volregimes_part2_knitr/plotSLBest.png)  
 
 It's also clear that Implied vs. Realized Vol does well in other regimes besides “SL”. Instead of ranking strategies by regime, we might also want to rank regimes, by strategy. Here is a such a list. That is, for each strategy, how do the regimes stack up in order of Information Ratio. Now is also a good time to compare the unconditional performance of a given strategy to the array of conditional performances by regime. For example, Imp/Realized Vol has an “SL” conditional information ratio of 1.07, an “NL” IR of 1.12, and a “SH” IR of 2.13. Compare that to an unconditional (ie. “always on”) IR of .35. It's not a panacea, however. For example, Commodity Carry as a strategy is not improved by conditioning on volatility regime. Here is a view of the strategy performances shown 2 ways: by regime and by strategy:  
+
 ![center](http://gtog.github.io/figs/volregimes_part2_knitr/rankRegimesByStrategy1.png) ![center](http://gtog.github.io/figs/volregimes_part2_knitr/rankRegimesByStrategy2.png)  
 
-
-Recall the 1-month transition probablility matrix (shown again here) we estimated in part 1. The highest 1 month transition probabilities are (in order): "NL", "SL", and "NM". Meaning, those are the 3 most likely   transitions from the current state. We are most likely to either 1) Enter "NL", 2) Stay where we are, or 3)   Enter "NM". If we transition to "NL", what will the top strategies be and how do they differ from the   current best strategies?  
-
+Recall the 1-month transition probablility matrix (shown again here) we estimated in part 1. The highest 1 month transition probabilities are (in order): "NL", "SL", and "NM". Meaning, those are the 3 most likely transitions from the current state. We are most likely to either 1) Enter "NL", 2) Stay where we are, or 3)Enter "NM". If we transition to "NL", what will the top strategies be and how do they differ from the current best strategies?  
 
 {% highlight text %}
       FH    FM    NH    NL    NM    SH    SL    SM
@@ -203,10 +135,8 @@ SH 0.033 0.004 0.230 0.058 0.182 0.204 0.049 0.240
 SL 0.003 0.004 0.028 0.361 0.161 0.038 0.279 0.126
 SM 0.016 0.007 0.120 0.115 0.256 0.134 0.091 0.261
 {% endhighlight %}
-
  
 A transition to "NL" suggests the following strategies:  
-
 
 {% highlight text %}
      ticker  metric       strategy.type
@@ -226,9 +156,7 @@ A transition to "NL" suggests the following strategies:
 14 CSGADLSE      NA   Commodities Value
 {% endhighlight %}
 
-
-Those results suggest that a our carry strategies will remain ok, but we'll want to add exposure to fixed income  
-momentum, as well as equity value strategies and perhaps FX momentum.
+Those results suggest that a our carry strategies will remain ok, but we'll want to add exposure to fixed income momentum, as well as equity value strategies and perhaps FX momentum.
 
 If we transition from "SL" into "NM", then...  
 
@@ -250,22 +178,10 @@ If we transition from "SL" into "NM", then...
 14 CSGADLSE      NA   Commodities Value
 {% endhighlight %}
 
+...we'll favor VIX vol relative value, FX momentum, and perhaps long only vol strategies. Note that "NM" is sort of a midling state where many strategies do reasonably well, with a few standouts. Note the shift in some carry strategies on this transition. This is a situation when vols rise, led by the front end of the term structure. This pushes levels and term structure back into higher levels. Thus the "NM" designation.When this happens, carry strategies usually get hurt and the results seem to bear this out. Given the current "SL" prescriptions, one would probably want to hedge the possibility of entering the "NM" regime.  
 
-...we'll favor VIX vol relative value, FX momentum, and perhaps long only vol strategies. Note that "NM"  
-is sort of a midling state where many strategies do reasonably well, with a few standouts. Note the  
-shift in some carry strategies on this transition. This is a situation when vols rise, led by the front end  
-of the term structure. This pushes levels and term structure back into higher levels. Thus the "NM" designation.  
-When this happens, carry strategies usually get hurt and the results seem to bear this out. Given the current "SL"  
-prescriptions, one would probably want to hedge the possibility of entering the "NM" regime.  
-
-
-### Conclusion  
+### Conclusion
  
-Whether or not you think volatility term structure and level are good conditioning information for strategy   
-selection, the framework should nonetheless prove valuable. You could add aditional conditioning factors to the   
-model and derive a different set of prescriptions. For some strategies, particularly vol based strategies,   
-this model improves performance quite nicely. We might imrprove our stratgey selections by adding other asset class  
-volatilities, or perhaps creating a composite volatility measure made up of may asset class vols and term  
-structures.   
+Whether or not you think volatility term structure and level are good conditioning information for strategy selection, the framework should nonetheless prove valuable. You could add aditional conditioning factors to the model and derive a different set of prescriptions. For some strategies, particularly vol based strategies, this model improves performance quite nicely. We might imrprove our stratgey selections by adding other asset class volatilities, or perhaps creating a composite volatility measure made up of may asset class vols and term structures.   
 
-#### Next up: Part 3: Estimating a regime switching model.  
+#### Next up: Part 3: Estimating a regime switching model.
