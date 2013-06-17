@@ -72,6 +72,7 @@
     background: inherit;
     color: #5A7EA3;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    max-width: 200px;
   }
 
   .sidebar > p{
