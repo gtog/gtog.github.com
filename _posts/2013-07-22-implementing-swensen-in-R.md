@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Monitoring an ETF Portfolio in R."
-description: "Implementing an endowment portfolio (of sorts) using ETFs."
+title: "Monitoring an ETF Portfolio in R"
+description: "Implementing an endowment portfolio (of sorts) using ETFs"
 category: finance
 tags: [Portfolio Construction, Performance Analytics, R]
 ---
@@ -23,13 +23,14 @@ From the article I linked to above...
 "Here’s a look at Swensen’s asset allocation recommendations:"
 
 Asset Class | %
------------ | --
+------------|------------
 Domestic Stocks	| 30%
 Foreign Developed Stocks | 15%
 Emerging Market Stocks | 5%
 Real Estate and Natural Resources | 20%
 U.S. Treasury Bonds | 15%
-U.S. Inflation-Protected Securities (TIPS) | 15%  
+U.S. Inflation-Protected Securities (TIPS) | 15%    
+
 
 All of the ETFs suggested in the original article were Vanguard ETFs and that seemed fine with me. I
 should also note that this simple ETF portfolio differs from a typical endowment portfolio in many 
@@ -121,7 +122,7 @@ port_value <- as.xts(apply(etfs_close, 1, FUN = function(x) sum(x * shares)))
 plot.xts(port_value, las = 1)  # A line chart of the portfolio value in dollars...
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/mtmLast.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/mtmLast.png)
 
 What follows is a series of functions from the PerformanceAnalytics package that will help us look at
 the performance of the portfolio. The benchmark portfolio will be a 60/40 stock and intermediate bond portfolio. I don't think using the SP500 is really a sensible benchmark because going all-in on stocks seems, well non-sensical. As it turns out, the 60/40 (just like the 1/n) portfolio is actually tough to beat. 
@@ -149,7 +150,7 @@ The performance of our portfolio relative to the benchmark:
 chart.RelativePerformance(Ra, as.vector(Rb), main = "Relative Performace vs. Benchmark", xaxis = TRUE)
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/chartRelativePerfomance.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/chartRelativePerfomance.png) 
 
 How much our portfolio outperforms the benchmark on an anuualized basis:
 
@@ -220,9 +221,11 @@ for (i in 1:length(tickers.etf)) {
 }
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/initWeights2.png) 
+The evolution of weights over time:  
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/initWeights1.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/initWeights2.png) 
 
-We can also display the prices of each sector over time:
+Price evolution over time:  
 
 {% highlight r %}
 par(mfrow = c(2, 2))
@@ -232,7 +235,7 @@ for (i in 1:length(tickers.etf)) {
 }
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/privesOverTime1.png) ![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/privesOverTime2.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/privesOverTime1.png) ![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/privesOverTime2.png) 
 
 
 Let's generate return streams for all of the ETFs in the portfolio and then perform some operations
@@ -276,7 +279,7 @@ chart.RelativePerformance(etfs.ret, as.vector(Rb), main = "Relative Performace v
     cex.legend = 0.8)
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/chartRelativePerformance.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/chartRelativePerformance.png)  
 
 
 Here is a chart that shows the returns for each asset class in bar chart form with the 20 day Std Dev
@@ -290,7 +293,7 @@ charts.BarVaR(etfs.ret[, 1:8], width = 20, gap = 0, methods = "StdDev", p = 0.95
     ylim = NA, colorset = 1:12, lty = 1, ypad = 0, legend.cex = 0.8)
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/returnAnalysis1.png) ![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/returnAnalysis2.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/returnAnalysis2.png) 
 
 
 Here is a nice table of CAPM parameters:
@@ -324,7 +327,7 @@ And a look at some historical and parametric VaR estimates:
 chart.VaRSensitivity(Ra, methods = c("HistoricalVaR", "ModifiedVaR", "GaussianVaR"))
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/varEstimates.png) 
+![center](https://raw.github.com/gtog/gtog.github.com/master/figs/2013-07-22-implementing-swensen-in-R/varEstimates.png) 
 
 
 In the next post, I'll continue the analysis with a look at the drawdowns, in particular, the most
