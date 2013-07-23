@@ -22,14 +22,6 @@ From the article I linked to above...
 
 "Here’s a look at Swensen’s asset allocation recommendations:"
 
-Asset Class | %
------------ | --
-Domestic Stocks	| 30%
-Foreign Developed Stocks | 15%
-Emerging Market Stocks | 5%
-Real Estate and Natural Resources | 20%
-U.S. Treasury Bonds | 15%
-U.S. Inflation-Protected Securities (TIPS) | 15%
 
 All of the ETFs suggested in the original article were Vanguard ETFs and that seemed fine with me. I
 should also note that this simple ETF portfolio differs from a typical endowment portfolio in many 
