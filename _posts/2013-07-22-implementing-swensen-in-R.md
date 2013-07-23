@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Monitoring an ETF Portfolio in R - Part 1"
-description: "An implementation of the 'endowment portfolio' using ETFS"
+description: "An implementation of the endowment portfolio using ETFS"
 category: finance
 tags: [Portfolio Construction, Finance, Investing, Performance Analytics]
 ---
