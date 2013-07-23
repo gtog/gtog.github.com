@@ -313,7 +313,7 @@ charts.BarVaR (etfs.ret[,1:8],
               legend.cex = 0.8)
 {% endhighlight %}
 
-![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/returnAnalysis1.png) ![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/returnAnalysis2.png) 
+![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/returnAnalysis2.png) 
 
 
 Here is a nice table of CAPM parameters:
@@ -324,20 +324,19 @@ table.CAPM(Ra, Rb, scale = 252, Rf = Rf, digits = 4)
 
 
 
-{% highlight text %}
-##                     daily.returns to daily.returns
-## Alpha                                      -0.0002
-## Beta                                        1.1291
-## Beta+                                       1.0792
-## Beta-                                       1.2131
-## R-squared                                   0.8743
-## Annualized Alpha                           -0.0512
-## Correlation                                 0.9351
-## Correlation p-value                         0.0000
-## Tracking Error                              0.0000
-## Active Premium                             -0.0443
-## Information Ratio                             -Inf
-## Treynor Ratio                               0.0503
+{% highlight text %}                     
+Alpha                                      -0.0002
+Beta                                        1.1291
+Beta+                                       1.0792
+Beta-                                       1.2131
+R-squared                                   0.8743
+Annualized Alpha                           -0.0512
+Correlation                                 0.9351
+Correlation p-value                         0.0000
+Tracking Error                              0.0000
+Active Premium                             -0.0443
+Information Ratio                             -Inf
+Treynor Ratio                               0.0503
 {% endhighlight %}
 
 
