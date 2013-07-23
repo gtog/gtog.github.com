@@ -5,6 +5,8 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "atom.xml"]
 auto: true
 pygments: true
+safe: true # this must be set to true in order for github to run site in production mode. 
+# analytics won't work if you don't set this.
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
