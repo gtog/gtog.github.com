@@ -29,7 +29,7 @@ Foreign Developed Stocks | 15%
 Emerging Market Stocks | 5%
 Real Estate and Natural Resources | 20%
 U.S. Treasury Bonds | 15%
-U.S. Inflation-Protected Securities (TIPS) | 15%
+U.S. Inflation-Protected Securities (TIPS) | 15%  
 
 All of the ETFs suggested in the original article were Vanguard ETFs and that seemed fine with me. I
 should also note that this simple ETF portfolio differs from a typical endowment portfolio in many 
@@ -358,3 +358,77 @@ Thanks for reading!
 Disclaimer: This blog post is not intended as investment advice and was written for information
 purposes only. Please take care when running your own portfolio. Nobody cares as much about 
 your money as you do.
+
+
+Code Snippets for Helper Functions:
+{% highlight r %}
+
+getData<-function(tickers,datasrc){
+  for (i in 1:length(tickers)){
+    cat(tickers[i],i,"\n")
+    getSymbols(tickers[i],src=datasrc,
+               auto.assign=getOption("getSymbols.auto.assign",TRUE),
+               env=parent.frame())
+  }
+}
+
+
+makeIndex<-function(x,inv,ret){
+  # Takes an xts object x and returns an index starting at 100 and evolving as the log returns of x.
+  # The inv flag tells whether or not to invert the series before calculating returns.
+  # The ret flag tells whether or not we have been passed a series of returns already.
+  init.val<-100
+  dts<-index(x,0)
+  if (inv==TRUE) data<-1/x else data<-x
+  if (ret==TRUE){ # we have a series of returns...
+    ret.series<-x
+  } else {
+    ret.series<-periodReturn(data,period="daily",subset=NULL,type="log")
+    dts<-index(ret.series,0)
+  }
+  n<-length(ret.series)
+  new.series<-ret.series
+  new.series[1]<-init.val
+  
+  for (i in 2:n){
+    new.series[i]<-(1+ret.series[i-1])*new.series[i-1]
+  }
+  names(new.series)<-c("index")
+  return(new.series)
+} # My custom index funtion for converting indices to 100 based at inception.
+
+
+calcWeights<-function(prices,numshares,initial){
+  ret<-NULL
+  for (i in 1:length(numshares)){
+    sh<-numshares[i]
+    ret<-cbind(ret,sh*prices[,i]/initial)
+  }
+  return(ret)
+}
+
+
+getOHLC<-function(assets,OHLC){
+  # Takes a list of assets and returns either the Open, High, Low, or Close depending
+  # on the passed value of HLOC. Return value is of type xts/zoo.
+  ret<-NULL
+  for (i in 1:length(assets)){
+    if (OHLC=="O" || OHLC=="Open"){
+      ret<-cbind(ret,assets[[i]][,1])
+    } else {
+      if (OHLC=="H" || OHLC=="High"){
+        ret<-cbind(ret,assets[[i]][,2])
+      } else {
+        if (OHLC=="L" || OHLC=="Low"){
+          ret<-cbind(ret,assets[[i]][,3])
+        } else {
+          if (OHLC=="C" || OHLC=="Close"){
+            ret<-cbind(ret,assets[[i]][,4])
+          }
+        }
+      }
+    }
+  }
+  return(ret)
+}
+{% endhighlight %}
