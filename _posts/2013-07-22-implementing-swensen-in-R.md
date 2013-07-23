@@ -22,6 +22,14 @@ From the article I linked to above...
 
 "Here’s a look at Swensen’s asset allocation recommendations:"
 
+Asset Class | %
+----------- | --
+Domestic Stocks | 30%
+Foreign Developed Stocks | 15%
+Emerging Market Stocks | 5%
+Real Estate and Natural Resources | 20%
+U.S. Treasury Bonds | 15%
+U.S. Inflation-Protected Securities (TIPS) | 15%
 
 All of the ETFs suggested in the original article were Vanguard ETFs and that seemed fine with me. I
 should also note that this simple ETF portfolio differs from a typical endowment portfolio in many 
@@ -52,14 +60,14 @@ suppressWarnings(getData(tickers.etf, data.source))
 
 
 {% highlight text %}
-## VGSIX 1 
-## VUSTX 2 
-## VGTSX 3 
-## VFISX 4 
-## VTSMX 5 
-## VFITX 6 
-## VEIEX 7 
-## VIPSX 8
+VGSIX 1 
+VUSTX 2 
+VGTSX 3 
+VFISX 4 
+VTSMX 5 
+VFITX 6 
+VEIEX 7 
+VIPSX 8
 {% endhighlight %}
 
 
@@ -68,8 +76,8 @@ suppressWarnings(getData(tickers.bench, data.source))
 {% endhighlight %}
 
 {% highlight text %}
-## DJIA 1 
-## ^GSPC 2
+DJIA 1 
+^GSPC 2
 {% endhighlight %}
 
 {% highlight r %}
@@ -77,7 +85,7 @@ suppressWarnings(getData(tsy.2y, datasrc = "FRED"))
 {% endhighlight %}
 
 {% highlight text %}
-## DGS2 1
+DGS2 1
 {% endhighlight %}
 
 
@@ -124,22 +132,7 @@ plot.xts(port_value, las = 1)  # A line chart of the portfolio value in dollars.
 What follows is a series of functions from the PerformanceAnalytics package that will help us look at
 the performance of the portfolio. The benchmark portfolio will be a 60/40 stock and intermediate bond portfolio. I don't think using the SP500 is really a sensible benchmark because going all-in on stocks seems, well non-sensical. As it turns out, the 60/40 (just like the 1/n) portfolio is actually tough to beat. 
 
-{% highlight r %}
-bench.60 <- periodReturn(GSPC[first.date][, 4], period = "daily", subset = NULL, type = "log")
-bench.40 <- periodReturn(VFITX[first.date][, 4], period = "daily", subset = NULL, type = "log")
 
-bench_ret <- 0.6 * bench.60 + 0.4 * bench.40  # Return stream for the 60/40 benchmark portfolio...
-port_ret <- periodReturn(port_value, period = "daily", subset = NULL, type = "log")  # Ret. stream for our portfolio...
-port_index <- makeIndex(port_ret, inv = FALSE, ret = TRUE)  # Our portfolio indexed to 100 at inception...
-bench_index <- makeIndex(bench_ret, inv = FALSE, ret = TRUE)  # Benchmark portfolio indexed to 100 at our inception date...
-
-# Setting up some variables to mach the PerformanceAnalytics lexicon...
-Ra <- port_ret
-Rb <- bench_ret
-dts <- index(Ra, 0)
-Rb <- xts(Rb, dts)
-Rf <- as.numeric(last(DGS2)/100/252)
-{% endhighlight %}
 
 The performance of our portfolio relative to the benchmark:
 
