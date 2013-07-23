@@ -130,9 +130,7 @@ plot.xts(port_value, las = 1)  # A line chart of the portfolio value in dollars.
 ![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/mtmLast.png) 
 
 What follows is a series of functions from the PerformanceAnalytics package that will help us look at
-the performance of the portfolio. The benchmark portfolio will be a 60/40 stock and intermediate bond portfolio. I don't think using the SP500 is really a sensible benchmark because going all-in on stocks
-seems, well non-sensical. As it turns out, the 60/40 (just like the 1/n) portfolio is actually tough to beat. 
-
+the performance of the portfolio. The benchmark portfolio will be a 60/40 stock and intermediate bond portfolio. I don't think using the SP500 is really a sensible benchmark because going all-in on stocks seems, well non-sensical. As it turns out, the 60/40 (just like the 1/n) portfolio is actually tough to beat. 
 
 {% highlight r %}
 bench.60 <- periodReturn(GSPC[first.date][, 4], period = "daily", subset = NULL, type = "log")
@@ -160,7 +158,7 @@ chart.RelativePerformance(Ra, as.vector(Rb), main = "Relative Performace vs. Ben
 ![center](http://gtog.github.io/figs/2013-07-22-implementing-swensen-in-R/chartRelativePerfomance.png) 
 
 
-How much our portfolio outperforms the benchmark on an anuualized basis:
+How much our portfolio outperforms the benchmark on an anualized basis:
 
 {% highlight r %}
 act.premium <- ActivePremium(Ra, Rb, scale = 252)
@@ -212,7 +210,6 @@ weights_chg
 {% endhighlight %}
 
 
-
 {% highlight text %}
 ## [1]  0.0225355 -0.0054766  0.0030894 -0.0003736  0.0528389 -0.0015985
 ## [7] -0.0095305 -0.0128677
@@ -255,21 +252,9 @@ for (i in 1:length(tickers.etf)) {
     etfs.ret <- cbind(etfs.ret, temp)
 }
 etfs.ret <- etfs.ret[, 2:9]
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error: subscript out of bounds
-{% endhighlight %}
-
-
-
-{% highlight r %}
 names(etfs.ret) <- tickers.human
 head(etfs.ret)
 {% endhighlight %}
-
 
 
 {% highlight text %}
