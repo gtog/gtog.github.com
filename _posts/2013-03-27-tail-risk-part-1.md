@@ -37,9 +37,9 @@ VaR(R=ret,
   invert=TRUE)  
 
 Libararies we'll need (and all dependencies, naturally)...  
-*quantmod  
-*PerformanceAnalytics  
-*knitr  
+quantmod  
+PerformanceAnalytics  
+knitr  
 
 We need to get some data from FRED database and set some initial parameters...  
 

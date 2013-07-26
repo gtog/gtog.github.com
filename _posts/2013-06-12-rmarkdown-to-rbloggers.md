@@ -53,7 +53,7 @@ KnitPost("YOURNEWPOST.Rmd")
 {% endhighlight %}
 
 * Move the resulting image folder (called 'figs') to your local git repository for your Jekyll site.  
-* Move the resulting markdown file to your local _posts folder for your Jekyll site.
+* Move the resulting markdown file to your local posts folder for your Jekyll site.
 * Add YML front matter to the head of the newly generated markdown file. 
 * Note: You need to set the "base url" in the code to the full blog site URL or the Feedburner feed won't  
 pick up the images in the "fig" folder.

@@ -82,11 +82,11 @@ Ok. Let's get down to the hard work of calculating all the return snippets for e
 
 Let's focus in on the current regime, "SL", and see what the data tells us about the different strategies. First, we might want to ask some questions about the current regime, like:  
 
-*When did it start?  
+When did it start?  
 
-*How long do regimes like this usually last?  
+How long do regimes like this usually last?  
 
-*What does the model say about expectations for how long this regime will last?  
+What does the model say about expectations for how long this regime will last?  
 
 The current regime (“Steep/Low” or “S/L”) began on October 11, 2012. As of January 11th, the time the data set was last updated, the current regime was 67 days old. The plot here shows the number of “SL” occurances in the sample by length of each occurence. So, we have seen 1 day “SL” regimes 23 times (those are excluded in the broader analysis). Similarly, we have seen an “SL” regime of 81 days length exactly 1 time in the sample. The current regime is getting a bit long in the tooth with respect to most occurrences observed in the data. Indeed, we have only seen 1 longer “SL” regime (the 81 day episode just mentioned).  
 
@@ -94,7 +94,7 @@ The current regime (“Steep/Low” or “S/L”) began on October 11, 2012. As 
 
 Recall the Total Length of Stay estimates from section 2.3 in Part 1. The total number of days we expect to spend in “SL” over the next year was estimated at 43 days. We have already exceeded that estimate by 24 days as January 11th and, as of today have exceeded even the longest “SL” regime observed in the sample. The upper-limit of the 97.5% quantile for the SL total length of stay estimate is 66 days. 
 
-Here are the information ratios for each of the strategies, conditional on being in an "SL" regime [full sample:1998-present]:  
+Here are the information ratios for each of the strategies, conditional on being in an "SL" regime (full sample:1998-present):  
 
 {% highlight text %}
      ticker  metric       strategy.type
